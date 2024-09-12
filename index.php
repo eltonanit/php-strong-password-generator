@@ -57,6 +57,13 @@
                             <button type="submit" class="btn btn-sm btn-primary">Genera Psw</button>
                         </div>
                     </div>
+                </form>
+                <?php if(isset($message)) { ?>
+                    <h2 class="text-red"> <?php echo $message; ?></h2>
+               <?php } ?>
+               <?php if(isset($password)) { ?>
+               <h2 class="text-success"> <?php echo $password; ?></h2>
+<?php } ?>
             </div>
          </div>
     </div>
