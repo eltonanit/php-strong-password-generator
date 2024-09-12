@@ -1,48 +1,12 @@
- <?php 
-      // Questo è un array di array 
-      $hotels = [
+ <?php
 
-        [
-            'name' => 'Hotel Belvedere',
-            'description' => 'Hotel Belvedere Descrizione',
-            'parking' => true,
-            'vote' => 4,
-            'distance_to_center' => 10.4
-        ],
-        [
-            'name' => 'Hotel Futuro',
-            'description' => 'Hotel Futuro Descrizione',
-            'parking' => true,
-            'vote' => 2,
-            'distance_to_center' => 2
-        ],
-        [
-            'name' => 'Hotel Rivamare',
-            'description' => 'Hotel Rivamare Descrizione',
-            'parking' => false,
-            'vote' => 1,
-            'distance_to_center' => 1
-        ],
-        [
-            'name' => 'Hotel Bellavista',
-            'description' => 'Hotel Bellavista Descrizione',
-            'parking' => false,
-            'vote' => 5,
-            'distance_to_center' => 5.5
-        ],
-        [
-            'name' => 'Hotel Milano',
-            'description' => 'Hotel Milano Descrizione',
-            'parking' => true,
-            'vote' => 2,
-            'distance_to_center' => 50
-        ],
-
-    ];
+ if(isset($_GET['length']) && is_numeric($_GET['length']) && $_GET['length'] != ''){
+    var_dump(is_numeric($_GET['length']));
+ }
 
 
- 
- ?>
+
+  ?>
 
 
 
@@ -66,12 +30,12 @@
             <div class="form-container">
                 <form action="./index.php" method="get">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-6">
                             <label for="" class="control-label">Inserisci lunghezza password</label>
-                            <input type="text" name="lenght" id="lenght" placeholder="Lunghezza Password" class="form-control form-control-sm ">
+                            <input type="number" min="6" name="lenght" id="lenght" placeholder="Lunghezza Password" class="form-control form-control-sm ">
                         </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-sm"></button>
+                        <div class="col-12 col-">
+                            <button type="submit" class="btn btn-sm btn-primary">Genera Psw</button>
                         </div>
                     </div>
             </div>
